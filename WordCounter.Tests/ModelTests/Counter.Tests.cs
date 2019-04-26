@@ -14,7 +14,6 @@ namespace WordCounter.Tests
     {
       RepeatCounter newCounter = new RepeatCounter();
       int result = newCounter.WordMatch("cat", "cat");
-      // any necessary logic to prep for test; instantiating new classes, etc.
       Assert.AreEqual(1, result);
     }
 
@@ -23,8 +22,15 @@ namespace WordCounter.Tests
     {
       RepeatCounter newCounter = new RepeatCounter();
       int result = newCounter.WordMatch("cat", "Cat");
-      // any necessary logic to prep for test; instantiating new classes, etc.
       Assert.AreEqual(1, result);
+    }
+
+    [TestMethod]
+    public void WordFilter_ReturnWordOnlyAlpha_string()
+    {
+      RepeatCounter newCounter = new RepeatCounter();
+      string result = newCounter.WordFilter("cat,");
+      Assert.AreEqual("cat", result);
     }
   }
 }

@@ -5,11 +5,21 @@ namespace WordCounter.Models
 {
   public class RepeatCounter
   {
+    public string WordFilter (string word)
+    {
+      char[] wordArray = word.ToCharArray();
+      string filteredWord = "";
+      foreach (char letter in wordArray) {
+        if (Char.IsLetter(letter)) {
+          filteredWord += letter;
+        }
+      }
+      return filteredWord.ToLower();
+    }
+
     public int WordMatch(string word, string wordToCompare)
     {
-      word = word.ToLower();
-      wordToCompare = word.ToLower();
-      if (word == wordToCompare)
+      if (WordFilter(word) == WordFilter(wordToCompare))
       {
         return 1;
       }
