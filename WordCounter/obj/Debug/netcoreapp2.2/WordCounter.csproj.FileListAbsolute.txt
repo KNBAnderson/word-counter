@@ -1,0 +1,9 @@
+/home/katlin/Coding/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp2.2/WordCounter.csprojAssemblyReference.cache
+/home/katlin/Coding/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp2.2/WordCounter.csproj.CoreCompileInputs.cache
+/home/katlin/Coding/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp2.2/WordCounter.AssemblyInfoInputs.cache
+/home/katlin/Coding/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp2.2/WordCounter.AssemblyInfo.cs
+/home/katlin/Coding/WordCounter.Solution/WordCounter/bin/Debug/netcoreapp2.2/WordCounter.deps.json
+/home/katlin/Coding/WordCounter.Solution/WordCounter/bin/Debug/netcoreapp2.2/WordCounter.dll
+/home/katlin/Coding/WordCounter.Solution/WordCounter/bin/Debug/netcoreapp2.2/WordCounter.pdb
+/home/katlin/Coding/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp2.2/WordCounter.dll
+/home/katlin/Coding/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp2.2/WordCounter.pdb

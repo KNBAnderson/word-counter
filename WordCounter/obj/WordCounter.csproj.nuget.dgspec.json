@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/katlin/Coding/word-counter-4.26.19/WordCounter/WordCounter.csproj": {}
+    "/home/katlin/Coding/WordCounter.Solution/WordCounter/WordCounter.csproj": {}
   },
   "projects": {
-    "/home/katlin/Coding/word-counter-4.26.19/WordCounter/WordCounter.csproj": {
+    "/home/katlin/Coding/WordCounter.Solution/WordCounter/WordCounter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/katlin/Coding/word-counter-4.26.19/WordCounter/WordCounter.csproj",
+        "projectUniqueName": "/home/katlin/Coding/WordCounter.Solution/WordCounter/WordCounter.csproj",
         "projectName": "WordCounter",
-        "projectPath": "/home/katlin/Coding/word-counter-4.26.19/WordCounter/WordCounter.csproj",
+        "projectPath": "/home/katlin/Coding/WordCounter.Solution/WordCounter/WordCounter.csproj",
         "packagesPath": "/home/katlin/.nuget/packages/",
-        "outputPath": "/home/katlin/Coding/word-counter-4.26.19/WordCounter/obj/",
+        "outputPath": "/home/katlin/Coding/WordCounter.Solution/WordCounter/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/share/dotnet/sdk/NuGetFallbackFolder"

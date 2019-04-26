@@ -1,20 +1,22 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ProjectName.Models;
+using WordCounter.Models;
 using System;
 using System.Collections.Generic;
 
-namespace ProjectName.Tests;
+namespace WordCounter.Tests
 {
   [TestClass]
-  public class ClassNameTest
+  public class RepeatCounterTest
   {
 
-    // [TestMethod]
-    // public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
-    // {
-    //   // any necessary logic to prep for test; instantiating new classes, etc.
-    //   Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
-    // }
+    [TestMethod]
+    public void WordMatch_CheckIfWordMatch_Int1()
+    {
+      RepeatCounter newCounter = new RepeatCounter();
+      int result = newCounter.WordMatch("cat", "cat");
+      // any necessary logic to prep for test; instantiating new classes, etc.
+      Assert.AreEqual(1, result);
+    }
 
   }
 }

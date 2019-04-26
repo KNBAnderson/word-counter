@@ -1617,6 +1617,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "WordCounter/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/WordCounter.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WordCounter.dll": {}
+        }
       }
     }
   },
@@ -5807,6 +5817,11 @@
         "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "WordCounter/1.0.0": {
+      "type": "project",
+      "path": "../WordCounter/WordCounter.csproj",
+      "msbuildProject": "../WordCounter/WordCounter.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5814,7 +5829,8 @@
       "MSTest.TestAdapter >= 1.3.2",
       "MSTest.TestFramework >= 1.3.2",
       "Microsoft.NET.Test.Sdk >= 15.9.0",
-      "Microsoft.NETCore.App >= 2.2.0"
+      "Microsoft.NETCore.App >= 2.2.0",
+      "WordCounter >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5824,11 +5840,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/katlin/Coding/word-counter-4.26.19/WordCounter.Tests/WordCounter.Tests.csproj",
+      "projectUniqueName": "/home/katlin/Coding/WordCounter.Solution/WordCounter.Tests/WordCounter.Tests.csproj",
       "projectName": "WordCounter.Tests",
-      "projectPath": "/home/katlin/Coding/word-counter-4.26.19/WordCounter.Tests/WordCounter.Tests.csproj",
+      "projectPath": "/home/katlin/Coding/WordCounter.Solution/WordCounter.Tests/WordCounter.Tests.csproj",
       "packagesPath": "/home/katlin/.nuget/packages/",
-      "outputPath": "/home/katlin/Coding/word-counter-4.26.19/WordCounter.Tests/obj/",
+      "outputPath": "/home/katlin/Coding/WordCounter.Solution/WordCounter.Tests/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
@@ -5844,7 +5860,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/katlin/Coding/WordCounter.Solution/WordCounter/WordCounter.csproj": {
+              "projectPath": "/home/katlin/Coding/WordCounter.Solution/WordCounter/WordCounter.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
