@@ -25,5 +25,16 @@ namespace WordCounter.Models
       }
       return 0;
     }
+
+    public int WordCountInASentence(string word, string sentence)
+    {
+      int wordCount = 0;
+      string[] sentenceArray = sentence.Split(" ");
+      foreach(string sentWord in sentenceArray)
+      {
+        wordCount += WordMatch(word, sentWord);
+      }
+      return wordCount;
+    }
   }
 }
