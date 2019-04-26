@@ -53,7 +53,7 @@ namespace WordCounter.Tests
     public void WordMatch_CheckIfWordsMatchPlural_int()
     {
       RepeatCounter newCounter = new RepeatCounter();
-      int result = newCounter.WordMatch("cat", "cats");
+      int result = newCounter.WordMatch("cats", "cat");
       Assert.AreEqual(1, result);
     }
 
@@ -62,6 +62,14 @@ namespace WordCounter.Tests
     {
       RepeatCounter newCounter = new RepeatCounter();
       int result = newCounter.WordMatch("machine", "machines");
+      Assert.AreEqual(1, result);
+    }
+
+    [TestMethod]
+    public void WordMatch_CheckIfWordsMatchPluralIES_int()
+    {
+      RepeatCounter newCounter = new RepeatCounter();
+      int result = newCounter.WordMatch("puppy", "puppies");
       Assert.AreEqual(1, result);
     }
 

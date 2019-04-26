@@ -9,8 +9,13 @@ namespace WordCounter.Models
     {
       char[] wordArray = word.ToCharArray();
       string filteredWord = "";
-      if (wordArray[wordArray.Length - 1] == 's' || wordArray[wordArray.Length - 1] == 'S') {
+      if (wordArray[wordArray.Length - 1] == 's' || wordArray[wordArray.Length - 1] == 'S' || wordArray[wordArray.Length - 1] == 'y' ||
+      wordArray[wordArray.Length - 1] == 'Y') {
         wordArray[wordArray.Length - 1] = '-';
+        if ((wordArray[wordArray.Length - 2] == 'e' || wordArray[wordArray.Length - 2] == 'E') && (wordArray[wordArray.Length - 3] == 'i' || wordArray[wordArray.Length - 3] == 'I')) {
+          wordArray[wordArray.Length - 2] = '-';
+          wordArray[wordArray.Length - 3] = '-';
+        }
       }
       foreach (char letter in wordArray) {
         if (Char.IsLetter(letter)) {
