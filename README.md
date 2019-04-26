@@ -1,41 +1,28 @@
 # _C# Project Setup_
 
-#### _Structure and files for Epicodus C# Week 1 Projects, last updated 04/24/2019_
 
-#### By _**Marc Davies**_
+#### By _**Katlin Anderson**_
 
 ## Description
 
-_All the files necessary to create an Epicodus C# Week 1 Project._
+_A program program that gathers both a word and sentence from a user, then checks how frequently the word appears in the sentence._
 
 ## Setup/Installation Requirements
 
 * _Clone from GitHub_
-* _Rename mstesttemplate to directory name of your choice_
-* _$cd into the directory and $atom all_
-* _Collapse all the directories and change all "ProjectNamexxx" to name of your choice (ie. ToDoListxxx)_
-* _Change all "ClassNamexxx" to name of your choice (ie. Tasksxxx)_
-* _Go through each individual file and Alt + F "ProjectName", replace all with name of your choice_
-* _Alt + F "ClassName", replace all with name of your choice_
-* _Back in your terminal, $cd into the two main subdirectories and $dotnet restore_
 
 ## Specs
 
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
-| Lorem | x | true/false |
-| Lorem | x | true/false |
-| Lorem | x | true/false |
-| Lorem | x | true/false |
-| Lorem | x | true/false |
+| The program should compare a word with another word, and add 1 to a count if they match  | "cat", "cat" | 1 |
+| The program should compare whether words match, regardless of case | "cat", "Cat" | 1 |
+| The program should compare whether words match, regardless of symbols | "cat", "cat." | 1 |
+| The program should compare a word to each word of a sentence, and count haw many times the word appears in the sentence | "cat", "Cat, the cat, plays with toys for cats and dogs, even though she is a cat, not a dog." | 3 |
 
 ## Known Bugs
 
-_None as of last update_
-
-## Support and contact details
-
-_Please contact me at marcdaviesriot@gmail.com if you run into any issues or have questions, ideas or feedback._
+_No known bugs_
 
 ## Technologies Used
 
@@ -45,4 +32,4 @@ _C#_
 
 *This software is licensed under the GPL license.*
 
-Copyright (c) 2019 **_Marc Davies_**
+Copyright (c) 2019 **_Katlin Anderson_**
