@@ -9,6 +9,9 @@ namespace WordCounter.Models
     {
       char[] wordArray = word.ToCharArray();
       string filteredWord = "";
+      if (wordArray[wordArray.Length - 1] == 's' || wordArray[wordArray.Length - 1] == 'S') {
+        wordArray[wordArray.Length - 1] = '-';
+      }
       foreach (char letter in wordArray) {
         if (Char.IsLetter(letter)) {
           filteredWord += letter;

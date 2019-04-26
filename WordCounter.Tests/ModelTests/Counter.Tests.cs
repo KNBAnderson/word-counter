@@ -54,7 +54,15 @@ namespace WordCounter.Tests
     {
       RepeatCounter newCounter = new RepeatCounter();
       int result = newCounter.WordMatch("cat", "cats");
-      Assert.AreEqual(0, result);
+      Assert.AreEqual(1, result);
+    }
+
+    [TestMethod]
+    public void WordMatch_CheckIfWordsMatchPluralES_int()
+    {
+      RepeatCounter newCounter = new RepeatCounter();
+      int result = newCounter.WordMatch("machine", "machines");
+      Assert.AreEqual(1, result);
     }
 
     [TestMethod]
@@ -82,11 +90,11 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
-    public void WordCountInASentence_CheckCountOfWordInSentence3_int()
+    public void WordCountInASentence_CheckCountOfWordInSentence4_int()
     {
       RepeatCounter newCounter = new RepeatCounter();
       int result = newCounter.WordCountInASentence("cat", "Cat, the cat, plays with toys for cats and dogs, even though she is a cat, not a dog.");
-      Assert.AreEqual(3, result);
+      Assert.AreEqual(4, result);
     }
 
     [TestMethod]
@@ -98,7 +106,7 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
-    public void WordCountInASentence_CheckCountOfWordInSentence4_int()
+    public void WordCountInASentence_CheckCountOfWordInSentence4WithPunct_int()
     {
       RepeatCounter newCounter = new RepeatCounter();
       int result = newCounter.WordCountInASentence("blah", "Blah blah, other bl4h. Wait, that's not a bla.h. But will bla.h count?");
