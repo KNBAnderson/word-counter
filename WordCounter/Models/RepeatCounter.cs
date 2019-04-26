@@ -7,12 +7,12 @@ namespace WordCounter.Models
   {
     public string WordFilter (string word)
     {
-      char[] wordArray = word.ToCharArray();
+      char[] wordArray = word.ToLower().ToCharArray();
       string filteredWord = "";
-      if (wordArray[wordArray.Length - 1] == 's' || wordArray[wordArray.Length - 1] == 'S' || wordArray[wordArray.Length - 1] == 'y' ||
-      wordArray[wordArray.Length - 1] == 'Y') {
+      //The below statement modifies words that could be plural as well as words that end in y and would have special plural rules
+      if (wordArray[wordArray.Length - 1] == 's' ||  wordArray[wordArray.Length - 1] == 'y') {
         wordArray[wordArray.Length - 1] = '-';
-        if ((wordArray[wordArray.Length - 2] == 'e' || wordArray[wordArray.Length - 2] == 'E') && (wordArray[wordArray.Length - 3] == 'i' || wordArray[wordArray.Length - 3] == 'I')) {
+        if (wordArray[wordArray.Length - 2] == 'e' && wordArray[wordArray.Length - 3] == 'i') {
           wordArray[wordArray.Length - 2] = '-';
           wordArray[wordArray.Length - 3] = '-';
         }
@@ -22,7 +22,7 @@ namespace WordCounter.Models
           filteredWord += letter;
         }
       }
-      return filteredWord.ToLower();
+      return filteredWord;
     }
 
     public int WordMatch(string word, string wordToCompare)

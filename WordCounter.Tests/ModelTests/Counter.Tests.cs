@@ -69,7 +69,7 @@ namespace WordCounter.Tests
     public void WordMatch_CheckIfWordsMatchPluralIES_int()
     {
       RepeatCounter newCounter = new RepeatCounter();
-      int result = newCounter.WordMatch("puppy", "puppies");
+      int result = newCounter.WordMatch("puppy", "PUPPIES");
       Assert.AreEqual(1, result);
     }
 
