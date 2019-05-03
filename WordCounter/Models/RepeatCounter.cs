@@ -5,7 +5,18 @@ namespace WordCounter.Models
 {
   public class RepeatCounter
   {
-    public string WordFilter (string word)
+    public string Word {get; set;}
+    public string Phrase {get; set;}
+    public int WordCount {get; set;}
+
+    public RepeatCounter (string word, string phrase)
+    {
+      Word = word;
+      Phrase = phrase;
+      WordCount = 0;
+    }
+
+    public string WordFilter(string word)
     {
       char[] wordArray = word.ToLower().ToCharArray();
       string filteredWord = "";
@@ -25,24 +36,16 @@ namespace WordCounter.Models
       return filteredWord;
     }
 
-    public int WordMatch(string word, string wordToCompare)
+    public void FindWordCount()
     {
-      if (WordFilter(word) == WordFilter(wordToCompare))
-      {
-        return 1;
-      }
-      return 0;
-    }
-
-    public int WordCountInASentence(string word, string sentence)
-    {
-      int wordCount = 0;
-      string[] sentenceArray = sentence.Split(" ");
+      string[] sentenceArray = Phrase.Split(" ");
       foreach(string sentWord in sentenceArray)
       {
-        wordCount += WordMatch(word, sentWord);
+        if (WordFilter(Word) == WordFilter(sentWord))
+        {
+          WordCount++;
+        }
       }
-      return wordCount;
     }
   }
 }
