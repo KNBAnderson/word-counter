@@ -28,6 +28,12 @@ namespace WordCounter.Controllers
       return RedirectToAction("Index");
     }
 
+    [HttpGet("/counter/{id}")]
+    public ActionResult Show(int id)
+    {
+      RepeatCounter repeatCounter = RepeatCounter.Find(id);
+      return View(repeatCounter);
+    }
     // [HttpPost("/cars/{id}/delete")]
     // public ActionResult Destroy(int id)
     // {
@@ -35,12 +41,6 @@ namespace WordCounter.Controllers
     //   return RedirectToAction("Index");
     // }
     //
-    // [HttpGet("/cars/{id}")]
-    // public ActionResult Show(int id)
-    // {
-    //   Car car = Car.Find(id);
-    //   return View(car);
-    // }
 
   }
 }

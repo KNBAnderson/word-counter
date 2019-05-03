@@ -53,5 +53,15 @@ namespace WordCounter.Models
       }
       return wordCounter;
     }
+
+    public static void ClearAll()
+    {
+      CounterList.Clear();
+    }
+
+    public static RepeatCounter Find(int searchId)
+    {
+      return CounterList[searchId-1];
+    }
   }
 }

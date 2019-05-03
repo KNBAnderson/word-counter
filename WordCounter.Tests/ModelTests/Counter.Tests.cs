@@ -6,8 +6,12 @@ using System.Collections.Generic;
 namespace WordCounter.Tests
 {
   [TestClass]
-  public class RepeatCounterTest
+  public class RepeatCounterTest : IDisposable
   {
+    public void Dispose()
+    {
+      RepeatCounter.ClearAll();
+    }
 
     [TestMethod]
     public void FindWordCount_CheckIfWordMatch_int()

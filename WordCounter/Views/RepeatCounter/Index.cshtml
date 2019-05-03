@@ -10,13 +10,20 @@
   </head>
   <body class="container">
     <h1>Never have to count words in a sentence again!</h1>
+    @if (Model.Count == 0)
+        {
+          <p>You have not inoutted any words :( !</p>
+        }
+    @if(Model.Count != 0)
+        {
+        @foreach (RepeatCounter repeatCounter in Model)
+        {
+          <div class="wordBox">
+            <a href='/counter/@repeatCounter.Id'>The word "@repeatCounter.Word" appears in "@repeatCounter.Phrase" @repeatCounter.WordCount times!</a>
+          </div>
+        }
+        }
 
-    @foreach (RepeatCounter repeatCounter in Model)
-    {
-      <div class="wordBox">
-        <p>The word "@repeatCounter.Word" appears in "@repeatCounter.Phrase" @repeatCounter.WordCount times!</p>
-      </div>
-    }
 
     <a href="/counter/new">Get the count for a new phrase!</a>
   </body>
