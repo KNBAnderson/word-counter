@@ -13,7 +13,7 @@ namespace WordCounter.Models
     {
       Word = word;
       Phrase = phrase;
-      WordCount = 0;
+      WordCount = this.FindWordCount();
     }
 
     public string WordFilter(string word)
@@ -36,16 +36,18 @@ namespace WordCounter.Models
       return filteredWord;
     }
 
-    public void FindWordCount()
+    public int FindWordCount()
     {
+      int wordCounter = 0;
       string[] sentenceArray = Phrase.Split(" ");
       foreach(string sentWord in sentenceArray)
       {
         if (WordFilter(Word) == WordFilter(sentWord))
         {
-          WordCount++;
+          wordCounter++;
         }
       }
+      return wordCounter;
     }
   }
 }

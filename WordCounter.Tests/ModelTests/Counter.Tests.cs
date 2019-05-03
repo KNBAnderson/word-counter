@@ -30,7 +30,7 @@ namespace WordCounter.Tests
     [TestMethod]
     public void WordFilter_ReturnWordOnlyAlpha_string()
     {
-      RepeatCounter newCounter = new RepeatCounter("", "");
+      RepeatCounter newCounter = new RepeatCounter("cat", "cat,");
       string result = newCounter.WordFilter("cat,");
       Assert.AreEqual("cat", result);
     }
