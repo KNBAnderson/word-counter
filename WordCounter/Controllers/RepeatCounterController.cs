@@ -11,8 +11,8 @@ namespace WordCounter.Controllers
     public ActionResult Index()
     {
 
-      // List<RepeatCounter> allRepeatCounters = Car.CarsList;
-      return View();
+      List<RepeatCounter> allRepeatCounters = RepeatCounter.CounterList;
+      return View(allRepeatCounters);
     }
 
     [HttpGet("/counter/new")]

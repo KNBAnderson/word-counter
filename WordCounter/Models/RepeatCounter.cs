@@ -8,12 +8,16 @@ namespace WordCounter.Models
     public string Word {get; set;}
     public string Phrase {get; set;}
     public int WordCount {get; set;}
+    public static List<RepeatCounter> CounterList {get; set;} = new List<RepeatCounter> {};
+    public int Id {get; set;}
 
     public RepeatCounter (string word, string phrase)
     {
       Word = word;
       Phrase = phrase;
       WordCount = this.FindWordCount();
+      CounterList.Add(this);
+      Id = CounterList.Count;
     }
 
     public string WordFilter(string word)
