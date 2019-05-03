@@ -10,9 +10,9 @@ _A program program that gathers both a word and sentence from a user, then check
 ## Setup/Installation Requirements
 
 * _Clone from GitHub_
-* _$ dotnet restore
-* _$ dotnet build
-* _$ dotnet run
+* _$ dotnet restore_
+* _$ dotnet build_
+* _$ dotnet run_
 
 ## Specs
 
