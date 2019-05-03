@@ -1,0 +1,69 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/katlin/Coding/WordCounter.Solution/WordCounter/WordCounter.csproj": {}
+  },
+  "projects": {
+    "/home/katlin/Coding/WordCounter.Solution/WordCounter/WordCounter.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/katlin/Coding/WordCounter.Solution/WordCounter/WordCounter.csproj",
+        "projectName": "WordCounter",
+        "projectPath": "/home/katlin/Coding/WordCounter.Solution/WordCounter/WordCounter.csproj",
+        "packagesPath": "/home/katlin/.nuget/packages/",
+        "outputPath": "/home/katlin/Coding/WordCounter.Solution/WordCounter/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/katlin/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
