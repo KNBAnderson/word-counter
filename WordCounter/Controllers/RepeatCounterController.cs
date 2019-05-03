@@ -7,28 +7,27 @@ namespace WordCounter.Controllers
 {
   public class RepeatCounterController : Controller
   {
+    [HttpGet("/counter")]
+    public ActionResult Index()
+    {
 
-    // [HttpGet("/cars")]
-    // public ActionResult Index()
-    // {
-    //
-    //   List<Car> allCars = Car.CarsList;
-    //   return View(allCars);
-    // }
-    //
-    // [HttpGet("/cars/new")]
-    // public ActionResult New()
-    // {
-    //   return View();
-    // }
-    //
-    // [HttpPost("/cars")]
-    // public ActionResult Create(string makeModel, int price, int miles, string infoAboutCar)
-    // {
-    //   Car newCar = new Car(makeModel, price, miles, infoAboutCar);
-    //   return RedirectToAction("Index");
-    // }
-    //
+      // List<RepeatCounter> allRepeatCounters = Car.CarsList;
+      return View();
+    }
+
+    [HttpGet("/counter/new")]
+    public ActionResult New()
+    {
+      return View();
+    }
+
+    [HttpPost("/counter")]
+    public ActionResult Create(string word, string phrase)
+    {
+      RepeatCounter newRepeatCounter = new RepeatCounter(word, phrase);
+      return RedirectToAction("Index");
+    }
+
     // [HttpPost("/cars/{id}/delete")]
     // public ActionResult Destroy(int id)
     // {
