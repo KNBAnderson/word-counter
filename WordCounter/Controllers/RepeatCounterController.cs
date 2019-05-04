@@ -34,13 +34,15 @@ namespace WordCounter.Controllers
       RepeatCounter repeatCounter = RepeatCounter.Find(id);
       return View(repeatCounter);
     }
-    // [HttpPost("/cars/{id}/delete")]
-    // public ActionResult Destroy(int id)
-    // {
-    //   Car.RemoveCar(id);
-    //   return RedirectToAction("Index");
-    // }
-    //
+
+    //This doesn't seem to work and I'm not sure why
+    [HttpPost("/counter/{id}/delete")]
+    public ActionResult Destroy(int id)
+    {
+      RepeatCounter.RemovePhrase(id);
+      return RedirectToAction("Index");
+    }
+
 
   }
 }

@@ -54,6 +54,11 @@ namespace WordCounter.Models
       return wordCounter;
     }
 
+    public static void RemovePhrase(int id)
+    {
+      CounterList.Remove(CounterList[id - 1]);
+    }
+
     public static void ClearAll()
     {
       CounterList.Clear();
